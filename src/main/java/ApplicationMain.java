@@ -7,9 +7,9 @@ public class ApplicationMain {
     public static void main(String[] args) throws InterruptedException {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-        while (true){
-            Thread.sleep(1000);
-            context.getBean(Quoter.class).sayQuote();
-        }
+//        while (true){
+//            Thread.sleep(1000);
+//            context.getBean(Quoter.class).sayQuote();
+//        }
     }
 }
