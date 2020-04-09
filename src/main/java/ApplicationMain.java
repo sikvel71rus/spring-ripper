@@ -4,9 +4,12 @@ import quoters.TerminatorQuoter;
 
 public class ApplicationMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-        context.getBean(TerminatorQuoter.class).sayQuote();
+        while (true){
+            Thread.sleep(1000);
+            context.getBean(Quoter.class).sayQuote();
+        }
     }
 }
